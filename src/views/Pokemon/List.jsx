@@ -13,6 +13,8 @@ export default function PokemonList() {
   const isSearching = !!search.length;
   // if there is a search, show the results, otherwise show all pokemons
   const pokeList = isSearching ? results : pokemons;
+  // if there is search and there are no results
+  const noPokemon = isSearching && !results.length;
 
   // useEffect to fetch pokemon API, create an object with the info I want to access to
   useEffect(() => {
@@ -33,7 +35,7 @@ export default function PokemonList() {
     getPokemons();
   }, []);
 
-  // function for handling search input, will also filter by name, be case sensitive and remove extra space
+  // function for handling search input, will also filter by name, be case insensitive and remove extra space
   const handleSearch = (event) => {
     setSearch(event.target.value);
     const searchResults = pokemons.filter((pokemon) =>
@@ -51,12 +53,13 @@ export default function PokemonList() {
       ) : (
         <>
           <input
+            value={search}
             placeholder="Search by name"
             type="text"
-            value={search}
-            onChange={() => {
-              handleSearch;
-            }}
+            onChange={handleSearch}
+            // onChange={() => {
+            //   handleSearch();
+            // }}
           />
           <h2>List of Pokemons</h2>
 
@@ -74,6 +77,7 @@ export default function PokemonList() {
           </div>
         </>
       )}
+      {noPokemon && <p>No results</p>}
     </>
   );
 }

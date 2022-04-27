@@ -57,8 +57,8 @@ export default function PokemonList() {
             placeholder="Search by name"
             type="text"
             onChange={handleSearch}
-            // onChange={() => {
-            //   handleSearch;
+            // onChange={(e) => {
+            //   handleSearch(e);
             // }}
           />
           <h2>List of Pokemons</h2>

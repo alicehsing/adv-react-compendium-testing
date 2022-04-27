@@ -1,6 +1,6 @@
 import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom';
 import PokemonList from './views/Pokemon/List';
-import styles from './App.css';
+import './App.css';
 
 export default function App() {
   return (

@@ -58,7 +58,7 @@ export default function PokemonList() {
             type="text"
             onChange={handleSearch}
             // onChange={() => {
-            //   handleSearch();
+            //   handleSearch;
             // }}
           />
           <h2>List of Pokemons</h2>

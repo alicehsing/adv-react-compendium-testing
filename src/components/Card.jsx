@@ -5,7 +5,7 @@ export default function PokemonCard({ name, image, type, defenseLevel }) {
       <h3>{name.toUpperCase()}</h3>
       <p>Type: {type}</p>
       <p>Defense Level: {defenseLevel}</p>
-      <img alt="image" src={image} />
+      <img alt="pokemon" src={image} />
     </div>
   );
 }

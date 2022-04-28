@@ -1,0 +1,42 @@
+html,
+body,
+#root,
+.App {
+  background-color: rgb(119, 161, 138);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  color: rgb(161, 240, 213);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.list {
+  width: 1000px;
+  background-color: rgb(134, 183, 183);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.card {
+  margin: 20px auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 30%;
+  background-color: blanchedalmond;
+}
+
+.card img {
+  width: 250px;
+  height: 250px;
+}
+
+p {
+  color: rgb(2, 2, 43);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
